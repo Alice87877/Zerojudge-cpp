@@ -1,0 +1,9 @@
+//https://zerojudge.tw/ShowProblem?problemid=a012
+#include <iostream>
+using namespace std;
+
+int main() {
+    long long a,b;
+    cin>>a>>b;
+    cout<<abs(a-b);
+}
