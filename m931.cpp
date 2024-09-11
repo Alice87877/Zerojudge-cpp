@@ -3,27 +3,24 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+struct point{
+    int a;
+    int b;
+    int c;
+};
+
+bool cmp(point a,point b){
+    return a.c>b.c;
+}
+
 int main(){
-    long long n,a[21][2];
+    int n;
     cin>>n;
+    point p[21];
     for(int i=0;i<n;i++){
-        cin>>a[i][0]>>a[i][1];
-    }git pull --rebase
-    long long m=-1,I;
-    for(int i=0;i<=n;i++){
-        if(a[i][0]*a[i][0]+a[i][1]*a[i][1]>m){
-            m=a[i][0]*a[i][0]+a[i][1]*a[i][1];
-            I=i;
-        }
+        cin>>p[i].a>>p[i].b;
+        p[i].c=p[i].a*p[i].a+p[i].b*p[i].b;
     }
-    a[I][0]=0;
-    a[I][1]=0;
-    m=-1;
-    for(int i=0;i<=n;i++){
-        if(a[i][0]*a[i][0]+a[i][1]*a[i][1]>m){
-            m=a[i][0]*a[i][0]+a[i][1]*a[i][1];
-            I=i;
-        }
-    }
-    cout<<a[I][0]<<' '<<a[I][1];
+    sort(p,p+n,cmp);
+    cout<<p[1].a<<' '<<p[1].b;
 }
