@@ -1,4 +1,5 @@
 //https://zerojudge.tw/ShowProblem?problemid=a565
+//http://203.68.236.9/problem/b0001
 #include <bits/stdc++.h>
 using namespace std;
 
